@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-10">
           <div className="col-span-2">
             <div className="flex items-center gap-2 mb-3">
-              <div className="w-8 h-8 rounded-lg bg-brand-500 grid place-items-center text-white font-extrabold shadow-glow">i</div>
+              <div className="w-8 h-8 rounded-lg bg-brand-500 grid place-items-center text-slate-900 font-extrabold shadow-glow">i</div>
               <span className="font-extrabold tracking-wide text-slate-900">ITICKET</span>
             </div>
             <p className="text-sm text-slate-600 max-w-xs">Modern event ticketing platform — concerts, theatre, festivals, sports.</p>

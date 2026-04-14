@@ -14,7 +14,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-40 backdrop-blur bg-white/85 border-b border-slate-100">
       <div className="container-x flex items-center justify-between h-16">
         <Link to="/" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-brand-500 grid place-items-center text-white font-extrabold shadow-glow">i</div>
+          <div className="w-8 h-8 rounded-lg bg-brand-500 grid place-items-center text-slate-900 font-extrabold shadow-glow">i</div>
           <span className="font-extrabold tracking-wide text-slate-900">ITICKET</span>
         </Link>
         <nav className="hidden md:flex items-center gap-1">

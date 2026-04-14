@@ -4,14 +4,19 @@ import { EventDto } from '../api/types';
 export default function TicketShowcase({ events }: { events: EventDto[] }) {
   const list = events.slice(0, 4);
   const [idx, setIdx] = useState(0);
+  const [paused, setPaused] = useState(false);
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (list.length === 0) return;
-    const t = setInterval(() => setIdx(i => (i + 1) % list.length), 4500);
+    if (list.length === 0 || paused) return;
+    const t = setInterval(() => setIdx(i => (i + 1) % list.length), 5000);
     return () => clearInterval(t);
-  }, [list.length]);
+  }, [list.length, paused]);
+
+  const next = () => { setPaused(true); setIdx(i => (i + 1) % list.length); };
+  const prev = () => { setPaused(true); setIdx(i => (i - 1 + list.length) % list.length); };
+  const go   = (i: number) => { setPaused(true); setIdx(i); };
 
   const onMove = (e: React.MouseEvent) => {
     const el = ref.current; if (!el) return;
@@ -105,11 +110,26 @@ export default function TicketShowcase({ events }: { events: EventDto[] }) {
         />
       </div>
 
+      {/* Prev / Next arrows */}
+      <button
+        onClick={prev}
+        aria-label="Previous"
+        className="absolute top-1/2 -translate-y-1/2 -left-3 md:-left-6 z-10 w-11 h-11 rounded-full bg-white shadow-card border border-slate-200 hover:bg-brand-500 hover:text-slate-900 hover:border-brand-500 grid place-items-center transition text-slate-700 text-lg">
+        ‹
+      </button>
+      <button
+        onClick={next}
+        aria-label="Next"
+        className="absolute top-1/2 -translate-y-1/2 -right-3 md:-right-6 z-10 w-11 h-11 rounded-full bg-white shadow-card border border-slate-200 hover:bg-brand-500 hover:text-slate-900 hover:border-brand-500 grid place-items-center transition text-slate-700 text-lg">
+        ›
+      </button>
+
       {/* Dots */}
       <div className="mt-5 flex justify-center gap-2">
         {list.map((_, i) => (
-          <button key={i} onClick={() => setIdx(i)}
-            className={`h-1.5 rounded-full transition-all ${i === idx ? 'w-8 bg-brand-500' : 'w-2 bg-slate-300'}`} />
+          <button key={i} onClick={() => go(i)}
+            aria-label={`Slide ${i + 1}`}
+            className={`h-1.5 rounded-full transition-all ${i === idx ? 'w-8 bg-brand-500' : 'w-2 bg-slate-300 hover:bg-slate-400'}`} />
         ))}
       </div>
     </div>

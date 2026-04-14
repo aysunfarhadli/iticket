@@ -67,14 +67,14 @@ export default function Chatbot() {
     <>
       <button
         onClick={() => setOpen(o => !o)}
-        className="fixed bottom-5 right-5 z-40 w-14 h-14 rounded-full bg-brand-500 hover:bg-brand-600 text-white shadow-glow grid place-items-center text-2xl transition"
+        className="fixed bottom-5 right-5 z-40 w-14 h-14 rounded-full bg-brand-500 hover:bg-brand-600 text-slate-900 shadow-glow grid place-items-center text-2xl transition"
         aria-label="Chat">
         {open ? '×' : '💬'}
       </button>
 
       {open && (
         <div className="fixed bottom-24 right-5 z-40 w-[360px] max-w-[calc(100vw-24px)] h-[540px] bg-white rounded-2xl shadow-card border border-slate-100 overflow-hidden flex flex-col animate-[fadeIn_.2s_ease]">
-          <div className="bg-brand-500 text-white p-4 flex items-center gap-3">
+          <div className="bg-brand-500 text-slate-900 p-4 flex items-center gap-3">
             <div className="w-9 h-9 rounded-full bg-white/20 grid place-items-center text-lg">🤖</div>
             <div className="flex-1">
               <div className="font-bold leading-tight">iTicket Bot</div>
@@ -88,7 +88,7 @@ export default function Chatbot() {
               <div key={i} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                 <div className={`max-w-[85%] rounded-2xl px-3.5 py-2 text-sm whitespace-pre-line ${
                   m.role === 'user'
-                    ? 'bg-brand-500 text-white rounded-br-md'
+                    ? 'bg-brand-500 text-slate-900 rounded-br-md'
                     : 'bg-white text-slate-800 border border-slate-100 rounded-bl-md'
                 }`}>
                   {m.text}
@@ -126,7 +126,7 @@ export default function Chatbot() {
             <input value={input} onChange={e => setInput(e.target.value)}
               placeholder="Sualını yaz..."
               className="flex-1 bg-slate-100 border border-transparent focus:border-brand-500 focus:bg-white rounded-full px-4 py-2 text-sm outline-none" />
-            <button disabled={busy || !input.trim()} className="bg-brand-500 hover:bg-brand-600 disabled:opacity-40 text-white rounded-full w-10 h-10 grid place-items-center">➤</button>
+            <button disabled={busy || !input.trim()} className="bg-brand-500 hover:bg-brand-600 disabled:opacity-40 text-slate-900 rounded-full w-10 h-10 grid place-items-center">➤</button>
           </form>
         </div>
       )}

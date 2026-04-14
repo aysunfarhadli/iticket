@@ -14,7 +14,7 @@ export default function InvoicePage() {
       <div className="card p-8">
         <div className="flex justify-between items-start border-b border-slate-200 pb-5 mb-5">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-lg bg-brand-500 grid place-items-center text-white font-extrabold">i</div>
+            <div className="w-10 h-10 rounded-lg bg-brand-500 grid place-items-center text-slate-900 font-extrabold">i</div>
             <div>
               <div className="text-xl font-extrabold text-slate-900">ITICKET</div>
               <div className="muted text-xs">Event ticketing platform</div>
@@ -57,7 +57,7 @@ export default function InvoicePage() {
         <div className="flex justify-end">
           <div className="text-right">
             <div className="muted text-sm">Total amount</div>
-            <div className="text-3xl font-extrabold text-brand-500">{inv.totalAmount} ₼</div>
+            <div className="text-3xl font-extrabold text-brand-600">{inv.totalAmount} ₼</div>
           </div>
         </div>
 

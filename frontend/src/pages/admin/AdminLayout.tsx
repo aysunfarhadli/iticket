@@ -1,7 +1,7 @@
 import { NavLink, Outlet } from 'react-router-dom';
 
 const link = ({ isActive }: { isActive: boolean }) =>
-  `block px-4 py-2 rounded-lg text-sm transition ${isActive ? 'bg-brand-500 text-white shadow-glow' : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'}`;
+  `block px-4 py-2 rounded-lg text-sm transition ${isActive ? 'bg-brand-500 text-slate-900 shadow-glow' : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'}`;
 
 export default function AdminLayout() {
   return (

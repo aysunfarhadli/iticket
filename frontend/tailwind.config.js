@@ -6,8 +6,8 @@ export default {
     extend: {
       colors: {
         brand: {
-          50:'#fff3ec',100:'#ffe0cc',200:'#ffc199',300:'#ff9c66',400:'#ff7a3d',
-          500:'#F15A29',600:'#d94717',700:'#b2380f',800:'#8c2c0c',900:'#6b220a'
+          50:'#fffaeb',100:'#fff0c7',200:'#ffe28a',300:'#ffd24d',400:'#ffc21f',
+          500:'#F5B400',600:'#d49b00',700:'#a67a00',800:'#7d5c00',900:'#4d3900'
         },
         mint:    { 500:'#00A9A5', 600:'#00908d' },
         success: '#39C57F',
@@ -20,7 +20,7 @@ export default {
       boxShadow: {
         soft: '0 4px 16px -4px rgba(15,23,42,0.08)',
         card: '0 8px 24px -8px rgba(15,23,42,0.10)',
-        glow: '0 12px 40px -12px rgba(241,90,41,0.45)'
+        glow: '0 12px 40px -12px rgba(245,180,0,0.55)'
       }
     }
   },
