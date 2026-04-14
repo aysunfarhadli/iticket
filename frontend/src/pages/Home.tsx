@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { api } from '../api/client';
 import { ApiResponse, Category, EventDto } from '../api/types';
 import EventCard from '../components/EventCard';
+import TicketShowcase from '../components/TicketShowcase';
 
 export default function Home() {
   const [featured, setFeatured] = useState<EventDto[]>([]);
@@ -43,20 +44,7 @@ export default function Home() {
             </div>
           </div>
           <div className="relative">
-            <div className="grid grid-cols-2 gap-4">
-              {featured.slice(0, 4).map((e, i) => (
-                <Link key={e.id} to={`/events/${e.id}`}
-                  className={`card card-hover overflow-hidden ${i % 2 ? 'mt-8' : ''}`}>
-                  <div className="aspect-square overflow-hidden">
-                    <img src={e.coverImageUrl} className="w-full h-full object-cover" />
-                  </div>
-                  <div className="p-3">
-                    <div className="text-[10px] font-semibold text-brand-600 uppercase">{e.categoryName}</div>
-                    <div className="text-sm font-semibold text-slate-900 line-clamp-1 mt-0.5">{e.title}</div>
-                  </div>
-                </Link>
-              ))}
-            </div>
+            <TicketShowcase events={featured} />
           </div>
         </div>
       </section>

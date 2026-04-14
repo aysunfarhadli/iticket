@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Protected from './components/Protected';
+import Chatbot from './components/Chatbot';
 
 import Home from './pages/Home';
 import Events from './pages/Events';
@@ -54,6 +55,7 @@ export default function App() {
         </Routes>
       </main>
       <Footer />
+      <Chatbot />
     </div>
   );
 }
