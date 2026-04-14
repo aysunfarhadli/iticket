@@ -40,7 +40,7 @@ export default function TicketShowcase({ events }: { events: EventDto[] }) {
         }}
       >
         {/* Glow */}
-        <div className="absolute -inset-6 bg-gradient-to-br from-brand-500/40 via-sky-400/30 to-pink-400/30 rounded-[36px] blur-2xl opacity-80" />
+        <div className="absolute -inset-6 bg-gradient-to-br from-brand-500/40 via-amber-400/30 to-rose-400/30 rounded-[36px] blur-2xl opacity-80" />
 
         {/* Ticket */}
         <div className="relative bg-white rounded-[28px] shadow-card overflow-hidden">
