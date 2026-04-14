@@ -16,7 +16,9 @@ export default {
         ink:     { 900:'#111418', 800:'#1a1f26', 700:'#262d36' },
         surface: '#F8F9FB'
       },
-      fontFamily: { sans: ['Inter','system-ui','sans-serif'] },
+      fontFamily: {
+        sans: ['-apple-system','BlinkMacSystemFont','"SF Pro Display"','"SF Pro Text"','"Inter"','"Helvetica Neue"','Arial','sans-serif']
+      },
       boxShadow: {
         soft: '0 4px 16px -4px rgba(15,23,42,0.08)',
         card: '0 8px 24px -8px rgba(15,23,42,0.10)',

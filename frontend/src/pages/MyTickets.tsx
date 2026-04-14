@@ -28,7 +28,7 @@ export default function MyTickets() {
   };
 
   const qrUrl = (code: string) =>
-    `https://api.qrserver.com/v1/create-qr-code/?size=240x240&margin=0&data=${encodeURIComponent(code)}`;
+    `https://quickchart.io/qr?size=240&margin=1&text=${encodeURIComponent(code)}`;
 
   return (
     <div className="container-x py-10">

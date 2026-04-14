@@ -71,7 +71,7 @@ public class DemoDataSeeder implements CommandLineRunner {
                         tt("Standart", new BigDecimal("80.00"), 400),
                         tt("Yuxarı mərtəbə", new BigDecimal("45.00"), 600)));
 
-        seedEvent("Acacia Pop Festival 2026", "İlin ən böyük pop festivalı — 8 saat, 12 sənətçi.",
+        seedEvent("Dream Fest 2026 — Baku Summer", "İlin ən böyük pop festivalı — 8 saat, 12 sənətçi.",
                 "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=1200",
                 LocalDateTime.now().plusDays(45).withHour(18).withMinute(30),
                 festival, baku_arena, true,
