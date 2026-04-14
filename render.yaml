@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: iticket
+    env: docker
+    plan: free
+    autoDeploy: true
+    healthCheckPath: /api/events/featured
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: dev
+      - key: MAIL_MOCK
+        value: "true"
